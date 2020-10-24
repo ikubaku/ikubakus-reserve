@@ -25,3 +25,6 @@
 [submodule "PKGBUILDs/fahcontrol-beta"]
 	path = PKGBUILDs/fahcontrol-beta
 	url = https://aur.archlinux.org/fahcontrol-beta.git
+[submodule "PKGBUILDs/fahviewer-beta"]
+	path = PKGBUILDs/fahviewer-beta
+	url = https://aur.archlinux.org/fahviewer-beta.git
