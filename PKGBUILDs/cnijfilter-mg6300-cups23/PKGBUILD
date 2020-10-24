@@ -10,7 +10,7 @@ pkgdesc="Canon IJ Printer Driver (for ${_model} series) with newer libcups suppo
 url="http://fr.canon.ch/Support/Consumer_Products/products/Fax__Multifunctionals/InkJet/PIXMA_MG_series/PIXMA_MG6350.aspx?DLtcmuri=tcm:109-994583&page=1&type=download"
 arch=('i686' 'x86_64')
 license=('custom')
-depends=('libpng<=1.7.0' 'libtiff' 'gtk2' 'popt')
+depends=('glibc' 'libpng<=1.7.0' 'libtiff' 'gtk2' 'popt')
 makedepends=('findutils' 'gawk')
 source=("http://gdlp01.c-wss.com/gds/3/0100004693/01/cnijfilter-source-${_pkgver}.tar.gz"
 	'cups.patch'
