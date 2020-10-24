@@ -7,3 +7,6 @@
 [submodule "PKGBUILDs/bloomrpc"]
 	path = PKGBUILDs/bloomrpc
 	url = https://aur.archlinux.org/bloomrpc.git
+[submodule "PKGBUILDs/gconf"]
+	path = PKGBUILDs/gconf
+	url = https://aur.archlinux.org/gconf.git
