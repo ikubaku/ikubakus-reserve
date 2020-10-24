@@ -22,3 +22,6 @@
 [submodule "PKGBUILDs/pygtk"]
 	path = PKGBUILDs/pygtk
 	url = https://aur.archlinux.org/pygtk.git
+[submodule "PKGBUILDs/fahcontrol-beta"]
+	path = PKGBUILDs/fahcontrol-beta
+	url = https://aur.archlinux.org/fahcontrol-beta.git
