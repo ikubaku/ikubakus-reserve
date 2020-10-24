@@ -1,0 +1,9 @@
+name: ikubakus-reserve
+#package_key: 00840ACBA2AA70E7
+#repo_key: 00840ACBA2AA70E7
+srcdest: sources
+logdest: logs
+pkgbuild: PKGBUILDs
+builds:
+  x86_64:
+    chroot: /home/boxie/chroot/x86_64
