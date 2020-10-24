@@ -10,3 +10,6 @@
 [submodule "PKGBUILDs/gconf"]
 	path = PKGBUILDs/gconf
 	url = https://aur.archlinux.org/gconf.git
+[submodule "PKGBUILDs/downgrade"]
+	path = PKGBUILDs/downgrade
+	url = https://aur.archlinux.org/downgrade.git
