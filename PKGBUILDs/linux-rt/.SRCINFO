@@ -1,0 +1,45 @@
+pkgbase = linux-rt
+	pkgdesc = Linux RT
+	pkgver = 5.9.1.18.arch1
+	pkgrel = 2
+	url = https://wiki.linuxfoundation.org/realtime/start
+	arch = x86_64
+	license = GPL2
+	makedepends = bc
+	makedepends = git
+	makedepends = graphviz
+	makedepends = imagemagick
+	makedepends = kmod
+	makedepends = libelf
+	makedepends = python-sphinx
+	makedepends = python-sphinx_rtd_theme
+	makedepends = xmlto
+	options = !strip
+	source = https://gitlab.archlinux.org/dvzrv/linux-rt/-/archive/v5.9.1.18.arch1/linux-rt-v5.9.1.18.arch1.tar.gz
+	source = config
+	source = sphinx-workaround.patch
+	sha512sums = 22ae012ca96c10c542e788968a863d39e697a561f0ffcd1dcf0c605e0144e4e8a820cff813c2f4f0d2c45ab7d1bf73d5002f608a9b3cb0a079c3fd270548c533
+	sha512sums = eda968b4408eabf1dc57796bb208e9088d7c475017fa5284de20b1f4fe770e8856000df36981d0eae051b7f8702355d0eed851a6a762ff3607fbfd73ab8a3855
+	sha512sums = 98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be
+	b2sums = ba432ba99cab7f3195b6b3ea5c0b6a40c090ed16674fc118a2c7755615e3ae1a7983cfffb65af73f488febf55e99c1e299884b399fab550bdfe25edc16e6694a
+	b2sums = 699c5a7686d5b19f8cb2bb47f1f63c32411c5edc8933eed31cc0f7cb68163465e665b38ee17c531e47e1c5417a849f34528c050675e105d8075946d056ef7f74
+	b2sums = b4e1377d97ad7e8144d6e55b6d43731e3271a5aec65b65ca6d81026a95f15f549b9303fb3c6f492099ca691e3f65f4cf7f0c3aa742df03b396d7f6d81813aa95
+
+pkgname = linux-rt
+	pkgdesc = The Linux RT kernel and modules
+	depends = coreutils
+	depends = initramfs
+	depends = kmod
+	optdepends = crda: to set the correct wireless channels of your country
+	optdepends = linux-firmware: firmware images needed for some devices
+	provides = VIRTUALBOX-GUEST-MODULES
+	provides = WIREGUARD-MODULE
+	replaces = virtualbox-guest-modules-arch
+	replaces = wireguard-arch
+
+pkgname = linux-rt-headers
+	pkgdesc = Headers and scripts for building modules for the Linux RT kernel
+
+pkgname = linux-rt-docs
+	pkgdesc = Documentation for the Linux RT kernel
+
