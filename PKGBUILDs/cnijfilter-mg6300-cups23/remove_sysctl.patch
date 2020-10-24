@@ -1,0 +1,10 @@
+diff -aur cnijfilter-source-3.80-1/cngpijmon/cnijnpr/cnijnpr/cnijnpr.c cnijfilter-source-3.80-1.orig/cngpijmon/cnijnpr/cnijnpr/cnijnpr.c
+--- cnijfilter-source-3.80-1/cngpijmon/cnijnpr/cnijnpr/cnijnpr.c        2020-10-24 23:34:28.388754500 +0900
++++ cnijfilter-source-3.80-1.orig/cngpijmon/cnijnpr/cnijnpr/cnijnpr.c   2020-10-24 23:34:37.108625100 +0900
+@@ -33,7 +33,6 @@
+ #include <signal.h>
+ #include <sys/ioctl.h>
+ #include <net/if.h>
+-#include <sys/sysctl.h>
+ #include <config.h>
+ #include <fcntl.h>
