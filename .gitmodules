@@ -19,3 +19,6 @@
 [submodule "PKGBUILDs/foldingathome-beta"]
 	path = PKGBUILDs/foldingathome-beta
 	url = https://aur.archlinux.org/foldingathome-beta.git
+[submodule "PKGBUILDs/pygtk"]
+	path = PKGBUILDs/pygtk
+	url = https://aur.archlinux.org/pygtk.git
