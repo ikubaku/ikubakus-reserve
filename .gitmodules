@@ -13,3 +13,6 @@
 [submodule "PKGBUILDs/downgrade"]
 	path = PKGBUILDs/downgrade
 	url = https://aur.archlinux.org/downgrade.git
+[submodule "PKGBUILDs/exercism-bin"]
+	path = PKGBUILDs/exercism-bin
+	url = https://aur.archlinux.org/exercism-bin.git
