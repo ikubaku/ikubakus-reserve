@@ -4,9 +4,9 @@
 _model=mg6300
 pkgname=cnijfilter-${_model}-cups23
 pkgver=3.80
-pkgrel=10
+pkgrel=11
 _pkgver=3.80-1
-pkgdesc="Canon IJ Printer Driver (for ${_model} series) with newer libcups support"
+pkgdesc="Canon IJ Printer Driver (for ${_model} series) ported for newer systems"
 url="http://fr.canon.ch/Support/Consumer_Products/products/Fax__Multifunctionals/InkJet/PIXMA_MG_series/PIXMA_MG6350.aspx?DLtcmuri=tcm:109-994583&page=1&type=download"
 arch=('i686' 'x86_64')
 license=('custom')
