@@ -31,6 +31,3 @@
 [submodule "PKGBUILDs/gyazo"]
 	path = PKGBUILDs/gyazo
 	url = https://aur.archlinux.org/gyazo.git
-[submodule "PKGBUILDs/lib32-ncurses5-compat-libs"]
-	path = PKGBUILDs/lib32-ncurses5-compat-libs
-	url = https://aur.archlinux.org/lib32-ncurses5-compat-libs.git
