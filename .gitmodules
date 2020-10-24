@@ -4,3 +4,6 @@
 [submodule "PKGBUILDs/bluez-alsa-git"]
 	path = PKGBUILDs/bluez-alsa-git
 	url = https://aur.archlinux.org/bluez-alsa-git.git
+[submodule "PKGBUILDs/bloomrpc"]
+	path = PKGBUILDs/bloomrpc
+	url = https://aur.archlinux.org/bloomrpc.git
