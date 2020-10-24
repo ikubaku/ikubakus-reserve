@@ -1,0 +1,11 @@
+diff -aur cnijfilter-source-3.80_old/backend/src/cnij_backend_common.c cnijfilter-source-3.80_new/backend/src/cnij_backend_common.c
+--- cnijfilter-source-3.80_old/backend/src/cnij_backend_common.c	2012-03-29 06:50:27.000000000 +0200
++++ cnijfilter-source-3.80_new/backend/src/cnij_backend_common.c	2013-03-31 19:49:41.335034142 +0200
+@@ -38,6 +38,7 @@
+ // CUPS Header
+ #include <cups/cups.h>
+ #include <cups/ipp.h>
++#include <cups/ppd.h>
+ 
+ // Header file for CANON
+ #include "cnij_backend_common.h"
