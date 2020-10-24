@@ -28,3 +28,6 @@
 [submodule "PKGBUILDs/fahviewer-beta"]
 	path = PKGBUILDs/fahviewer-beta
 	url = https://aur.archlinux.org/fahviewer-beta.git
+[submodule "PKGBUILDs/gyazo"]
+	path = PKGBUILDs/gyazo
+	url = https://aur.archlinux.org/gyazo.git
