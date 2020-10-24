@@ -16,3 +16,6 @@
 [submodule "PKGBUILDs/exercism-bin"]
 	path = PKGBUILDs/exercism-bin
 	url = https://aur.archlinux.org/exercism-bin.git
+[submodule "PKGBUILDs/foldingathome-beta"]
+	path = PKGBUILDs/foldingathome-beta
+	url = https://aur.archlinux.org/foldingathome-beta.git
