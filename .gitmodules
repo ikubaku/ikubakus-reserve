@@ -1,3 +1,6 @@
 [submodule "PKGBUILDs/yay"]
 	path = PKGBUILDs/yay
 	url = https://aur.archlinux.org/yay.git
+[submodule "PKGBUILDs/bluez-alsa-git"]
+	path = PKGBUILDs/bluez-alsa-git
+	url = https://aur.archlinux.org/bluez-alsa-git.git
