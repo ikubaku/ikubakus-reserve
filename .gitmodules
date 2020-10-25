@@ -31,3 +31,6 @@
 [submodule "PKGBUILDs/gyazo"]
 	path = PKGBUILDs/gyazo
 	url = https://aur.archlinux.org/gyazo.git
+[submodule "PKGBUILDs/lpc21isp"]
+	path = PKGBUILDs/lpc21isp
+	url = https://aur.archlinux.org/lpc21isp.git
