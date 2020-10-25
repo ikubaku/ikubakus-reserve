@@ -34,3 +34,6 @@
 [submodule "PKGBUILDs/lpc21isp"]
 	path = PKGBUILDs/lpc21isp
 	url = https://aur.archlinux.org/lpc21isp.git
+[submodule "PKGBUILDs/openocd-git"]
+	path = PKGBUILDs/openocd-git
+	url = https://aur.archlinux.org/openocd-git.git
