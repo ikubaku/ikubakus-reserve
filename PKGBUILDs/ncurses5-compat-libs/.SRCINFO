@@ -1,0 +1,18 @@
+pkgbase = ncurses5-compat-libs
+	pkgdesc = System V Release 4.0 curses emulation library, ABI 5
+	pkgver = 6.2
+	pkgrel = 1
+	url = http://invisible-island.net/ncurses/ncurses.html
+	arch = i686
+	arch = x86_64
+	license = MIT
+	depends = glibc
+	depends = gcc-libs
+	depends = sh
+	provides = libtinfo5
+	conflicts = libtinfo5
+	source = https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz
+	sha256sums = 30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d
+
+pkgname = ncurses5-compat-libs
+
