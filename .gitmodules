@@ -40,3 +40,6 @@
 [submodule "PKGBUILDs/radeontop"]
 	path = PKGBUILDs/radeontop
 	url = https://aur.archlinux.org/radeontop.git
+[submodule "PKGBUILDs/zotero"]
+	path = PKGBUILDs/zotero
+	url = https://aur.archlinux.org/zotero.git
