@@ -37,3 +37,6 @@
 [submodule "PKGBUILDs/openocd-git"]
 	path = PKGBUILDs/openocd-git
 	url = https://aur.archlinux.org/openocd-git.git
+[submodule "PKGBUILDs/radeontop"]
+	path = PKGBUILDs/radeontop
+	url = https://aur.archlinux.org/radeontop.git
