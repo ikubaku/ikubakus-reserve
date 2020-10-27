@@ -1,0 +1,21 @@
+# Maintainer: ikubaku <hide4d51 at gmail.com>
+pkgname=platformio-udev
+pkgver=5.0.1
+pkgrel=1
+pkgdesc="Th udev rule for various boards supported by PlatformIO"
+arch=("any")
+url="https://github.com/platformio/platformio-core"
+license=('apache')
+depends=("udev")
+makedepends=()
+optdepends=()
+conflicts=()
+replaces=()
+backup=("etc/udev/rules.d/99-platformio-udev.rules")
+install=platformio-udev.install
+source=("https://raw.githubusercontent.com/platformio/platformio-core/v5.0.1/scripts/99-platformio-udev.rules")
+sha256sums=("bf9db6a34b2fe3363455868b0ede44451559e9c073f07f9134d092dadf5ef857")
+
+package() {
+        install -Dt "$pkgdir/etc/udev/rules.d/" "$srcdir/99-platformio-udev.rules"
+}

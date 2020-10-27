@@ -1,0 +1,15 @@
+pkgbase = platformio-udev
+	pkgdesc = Th udev rule for various boards supported by PlatformIO
+	pkgver = 5.0.1
+	pkgrel = 1
+	url = https://github.com/platformio/platformio-core
+	install = platformio-udev.install
+	arch = any
+	license = apache
+	depends = udev
+	backup = etc/udev/rules.d/99-platformio-udev.rules
+	source = https://raw.githubusercontent.com/platformio/platformio-core/v5.0.1/scripts/99-platformio-udev.rules
+	sha256sums = bf9db6a34b2fe3363455868b0ede44451559e9c073f07f9134d092dadf5ef857
+
+pkgname = platformio-udev
+
