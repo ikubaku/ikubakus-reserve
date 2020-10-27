@@ -17,6 +17,5 @@ source=("https://raw.githubusercontent.com/analogdevicesinc/m2k-fw/v0.26/scripts
 sha256sums=("b4addf0566ccb7df58b593cab0f1726b2450659a5de7d746b5adff61669e0f80")
 
 package() {
-        cd "$pkgname-$pkgver"
         install "$srcdir/53-adi-m2k-usb.rules" "$pkgdir/etc/udev/rules.d/"
 }
