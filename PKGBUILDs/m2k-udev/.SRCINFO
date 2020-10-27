@@ -1,0 +1,15 @@
+pkgbase = m2k-udev
+	pkgdesc = Th udev rule for Analog Devices ADALM2000
+	pkgver = 0.26
+	pkgrel = 1
+	url = https://github.com/analogdevicesinc/m2k-fw
+	install = m2k-udev.install
+	arch = any
+	license = custom
+	depends = udev
+	backup = etc/udev/rules.d/53-adi-m2k-usb.rules
+	source = https://raw.githubusercontent.com/analogdevicesinc/m2k-fw/v0.26/scripts/53-adi-m2k-usb.rules
+	sha256sums = b4addf0566ccb7df58b593cab0f1726b2450659a5de7d746b5adff61669e0f80
+
+pkgname = m2k-udev
+
