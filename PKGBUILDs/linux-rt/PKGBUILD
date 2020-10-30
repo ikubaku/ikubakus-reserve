@@ -2,25 +2,25 @@
 # Contributor: David Runge <dvzrv@archlinux.org>
 
 pkgbase=linux-rt
-pkgver=5.9.1.18.arch1
-pkgrel=2
+pkgver=5.9.1.20.arch1
+pkgrel=1
 pkgdesc='Linux RT'
 arch=('x86_64')
 url="https://wiki.linuxfoundation.org/realtime/start"
 license=('GPL2')
-makedepends=('bc' 'git' 'graphviz' 'imagemagick' 'kmod' 'libelf'
+makedepends=('bc' 'git' 'graphviz' 'imagemagick' 'kmod' 'libelf' 'pahole'
 'python-sphinx' 'python-sphinx_rtd_theme' 'xmlto')
 options=('!strip')
 source=(
-  "https://gitlab.archlinux.org/dvzrv/linux-rt/-/archive/v5.9.1.18.arch1/linux-rt-v5.9.1.18.arch1.tar.gz"
+  "https://gitlab.archlinux.org/dvzrv/linux-rt/-/archive/v5.9.1.20.arch1/linux-rt-v5.9.1.20.arch1.tar.gz"
   config
   sphinx-workaround.patch
 )
-sha512sums=('22ae012ca96c10c542e788968a863d39e697a561f0ffcd1dcf0c605e0144e4e8a820cff813c2f4f0d2c45ab7d1bf73d5002f608a9b3cb0a079c3fd270548c533'
-            'eda968b4408eabf1dc57796bb208e9088d7c475017fa5284de20b1f4fe770e8856000df36981d0eae051b7f8702355d0eed851a6a762ff3607fbfd73ab8a3855'
+sha512sums=('4b64aeb591f264857e6abe36ee0c8a56554359d045cbb7ecac1d67d9a54f15af8a4d8045460a74c3be765e895158b3cc252245f3be78e8e3d79dc82e4cdf700b'
+            '34d040462566e365e094ce1ce6a22558913203f98a4beead302efc339c645e1cf4788cd1ff642a1a5161a4947ff23fe87867ff8ed4fbeb8814d18c12e8e4239d'
             '98e97155f86bbe837d43f27ec1018b5b6fdc6c372d6f7f2a0fe29da117d53979d9f9c262f886850d92002898682781029b80d4ee923633fc068f979e6c8254be')
-b2sums=('ba432ba99cab7f3195b6b3ea5c0b6a40c090ed16674fc118a2c7755615e3ae1a7983cfffb65af73f488febf55e99c1e299884b399fab550bdfe25edc16e6694a'
-        '699c5a7686d5b19f8cb2bb47f1f63c32411c5edc8933eed31cc0f7cb68163465e665b38ee17c531e47e1c5417a849f34528c050675e105d8075946d056ef7f74'
+b2sums=('58bd5c39e7f4a84b32d40b8a8cc0d8b13d2607b62d99b2bfde796c84bdcc53c5ed51f1550fbceea8a8b36240da554f2623f059ba1966e0ab8f75ad8bd3171867'
+        'b2b925584c62ede37276f7207ce72caa702cf8d27f8ae0653e564f49a96f969518347ef888ccf5210c82a971dc89e8cc4f269234072c6e3121a6cf1f39f35331'
         'b4e1377d97ad7e8144d6e55b6d43731e3271a5aec65b65ca6d81026a95f15f549b9303fb3c6f492099ca691e3f65f4cf7f0c3aa742df03b396d7f6d81813aa95')
 
 # NOTE: The PGP sign verification is removed because it is hard to verify it in the chroot environment.
@@ -30,7 +30,7 @@ export KBUILD_BUILD_USER=$pkgbase
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
 
 prepare() {
-  cd "${pkgbase}-v${pkgver}"
+  cd "${pkgbase}"
 
   echo "Setting version..."
   scripts/setlocalversion --save-scmversion
@@ -58,7 +58,7 @@ prepare() {
 }
 
 build() {
-  cd "${pkgbase}-v${pkgver}"
+  cd "${pkgbase}"
   make all
   make htmldocs
 }
@@ -69,9 +69,8 @@ _package() {
   optdepends=('crda: to set the correct wireless channels of your country'
               'linux-firmware: firmware images needed for some devices')
   provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE)
-  replaces=(virtualbox-guest-modules-arch wireguard-arch)
 
-  cd "${pkgbase}-v${pkgver}"
+  cd "${pkgbase}"
   local kernver="$(<version)"
   local modulesdir="$pkgdir/usr/lib/modules/$kernver"
 
@@ -93,7 +92,7 @@ _package() {
 _package-headers() {
   pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
 
-  cd "${pkgbase}-v${pkgver}"
+  cd "${pkgbase}"
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
 
   echo "Installing build files..."
@@ -171,7 +170,7 @@ _package-headers() {
 _package-docs() {
   pkgdesc="Documentation for the $pkgdesc kernel"
 
-  cd "${pkgbase}-v${pkgver}"
+  cd "${pkgbase}"
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
 
   echo "Installing documentation..."
