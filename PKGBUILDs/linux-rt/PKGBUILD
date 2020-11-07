@@ -30,7 +30,7 @@ export KBUILD_BUILD_USER=$pkgbase
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
 
 prepare() {
-  cd "${pkgbase}"
+  cd "${pkgbase}-v${pkgver}"
 
   echo "Setting version..."
   scripts/setlocalversion --save-scmversion
@@ -58,7 +58,7 @@ prepare() {
 }
 
 build() {
-  cd "${pkgbase}"
+  cd "${pkgbase}-v${pkgver}"
   make all
   make htmldocs
 }
@@ -70,7 +70,7 @@ _package() {
               'linux-firmware: firmware images needed for some devices')
   provides=(VIRTUALBOX-GUEST-MODULES WIREGUARD-MODULE)
 
-  cd "${pkgbase}"
+  cd "${pkgbase}-v${pkgver}"
   local kernver="$(<version)"
   local modulesdir="$pkgdir/usr/lib/modules/$kernver"
 
@@ -92,7 +92,7 @@ _package() {
 _package-headers() {
   pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel"
 
-  cd "${pkgbase}"
+  cd "${pkgbase}-v${pkgver}"
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
 
   echo "Installing build files..."
@@ -170,7 +170,7 @@ _package-headers() {
 _package-docs() {
   pkgdesc="Documentation for the $pkgdesc kernel"
 
-  cd "${pkgbase}"
+  cd "${pkgbase}-v${pkgver}"
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
 
   echo "Installing documentation..."
