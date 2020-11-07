@@ -1,5 +1,5 @@
-pkgbase = linux-xanmod
-	pkgdesc = Linux Xanmod
+pkgbase = linux-xanmod-amd-zen
+	pkgdesc = Linux Xanmod (AMD Zen optimization)
 	pkgver = 5.9.6
 	pkgrel = 1
 	url = http://www.xanmod.org/
@@ -25,8 +25,8 @@ pkgbase = linux-xanmod
 	sha256sums = 2c7369218e81dee86f8ac15bda741b9bb34fa9cefcb087760242277a8207d511
 	sha256sums = 6c66dba73251440352f93ff32b72f5dd49536d0f17ef9347867660fd3a626991
 
-pkgname = linux-xanmod
-	pkgdesc = The Linux kernel and modules with Xanmod patches
+pkgname = linux-xanmod-amd-zen
+	pkgdesc = The Linux kernel and modules with Xanmod patches (AMD Zen optimization)
 	depends = coreutils
 	depends = kmod
 	depends = initramfs
@@ -37,8 +37,8 @@ pkgname = linux-xanmod
 	conflicts = linux-xanmod-git
 	replaces = linux-xanmod-git
 
-pkgname = linux-xanmod-headers
-	pkgdesc = Header files and scripts for building modules for Xanmod Linux kernel
+pkgname = linux-xanmod-amd-zen-headers
+	pkgdesc = Header files and scripts for building modules for Xanmod Linux kernel (AMD Zen optimization)
 	provides = linux-headers
 	provides = linux-xanmod-git-headers
 	conflicts = linux-xanmod-git-headers
