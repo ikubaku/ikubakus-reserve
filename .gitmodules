@@ -43,3 +43,6 @@
 [submodule "PKGBUILDs/zotero"]
 	path = PKGBUILDs/zotero
 	url = https://aur.archlinux.org/zotero.git
+[submodule "PKGBUILDs/python2-gobject2"]
+	path = PKGBUILDs/python2-gobject2
+	url = https://aur.archlinux.org/python2-gobject2.git
