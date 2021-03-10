@@ -12,7 +12,7 @@
 ##
 ## Look inside 'choose-gcc-optimization.sh' to choose your microarchitecture
 ## Valid numbers between: 0 to 99
-## Default is: 0 => AMD_MZEN
+## Default is: 13 => CONFIG_MZEN
 ## Good option if your package is for one machine: 99 => native
 if [ -z ${_microarchitecture+x} ]; then
   _microarchitecture=13
@@ -52,7 +52,7 @@ _makenconfig=
 ### IMPORTANT: Do no edit below this line unless you know what you're doing
 
 pkgbase=linux-xanmod-amd-zen
-pkgver=5.11.0
+pkgver=5.11.5
 _major=5.11
 _branch=5.x
 xanmod=1
@@ -82,7 +82,7 @@ for _patch in ${_patches[@]}; do
 done
 
 sha256sums=('04f07b54f0d40adfab02ee6cbd2a942c96728d87c1ef9e120d0cb9ba3fe067b4'
-            '9d49118bb60c0277ebac5aadd4938eb41561dd3d97c9422832e62d0ffc5c59df'
+            'ec9d48ebe4159957e75aa7b82f16c88abff87eeb7b24607e19ce18fc11e16416'
             '03bb8b234a67b877a34a8212936ba69d8700c54c7877686cbd9742a536c87134'
             '52fc0fcd806f34e774e36570b2a739dbdf337f7ff679b1c1139bee54d03301eb')
 
@@ -199,14 +199,15 @@ _package() {
   echo "$pkgbase" | install -Dm644 /dev/stdin "$modulesdir/pkgbase"
 
   msg2 "Installing modules..."
-  make INSTALL_MOD_PATH="$pkgdir/usr" modules_install
+  make INSTALL_MOD_PATH="$pkgdir/usr" INSTALL_MOD_STRIP=1 modules_install
 
   # remove build and source links
   rm "$modulesdir"/{source,build}
 }
 
 _package-headers() {
-  pkgdesc="Header files and scripts for building modules for Xanmod Linux kernel (AMD Zen optimization)"
+  pkgdesc="Headers and scripts for building modules for the $pkgdesc kernel (AMD Zen optimization)"
+  depends=(pahole)
 
   cd linux-${_major}
   local builddir="$pkgdir/usr/lib/modules/$(<version)/build"
@@ -275,6 +276,8 @@ _package-headers() {
     esac
   done < <(find "$builddir" -type f -perm -u+x ! -name vmlinux -print0)
 
+  msg2 "Stripping vmlinux..."
+  strip -v $STRIP_STATIC "$builddir/vmlinux"
   msg2 "Adding symlink..."
   mkdir -p "$pkgdir/usr/src"
   ln -sr "$builddir" "$pkgdir/usr/src/$pkgbase"

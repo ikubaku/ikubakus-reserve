@@ -1,6 +1,6 @@
 pkgbase = linux-xanmod-amd-zen
 	pkgdesc = Linux Xanmod (AMD Zen optimization)
-	pkgver = 5.11.0
+	pkgver = 5.11.5
 	pkgrel = 1
 	url = http://www.xanmod.org/
 	arch = x86_64
@@ -13,11 +13,11 @@ pkgbase = linux-xanmod-amd-zen
 	makedepends = cpio
 	options = !strip
 	source = https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.11.tar.xz
-	source = https://github.com/xanmod/linux/releases/download/5.11.0-xanmod1/patch-5.11.0-xanmod1.xz
+	source = https://github.com/xanmod/linux/releases/download/5.11.5-xanmod1/patch-5.11.5-xanmod1.xz
 	source = choose-gcc-optimization.sh
 	source = sphinx-workaround.patch::https://git.archlinux.org/svntogit/packages.git/plain/trunk/sphinx-workaround.patch?h=packages/linux&id=be7d4710850020de55bce930c83fa80347c02fc3
 	sha256sums = 04f07b54f0d40adfab02ee6cbd2a942c96728d87c1ef9e120d0cb9ba3fe067b4
-	sha256sums = 9d49118bb60c0277ebac5aadd4938eb41561dd3d97c9422832e62d0ffc5c59df
+	sha256sums = ec9d48ebe4159957e75aa7b82f16c88abff87eeb7b24607e19ce18fc11e16416
 	sha256sums = 03bb8b234a67b877a34a8212936ba69d8700c54c7877686cbd9742a536c87134
 	sha256sums = 52fc0fcd806f34e774e36570b2a739dbdf337f7ff679b1c1139bee54d03301eb
 
@@ -30,5 +30,6 @@ pkgname = linux-xanmod-amd-zen
 	optdepends = linux-firmware: firmware images needed for some devices
 
 pkgname = linux-xanmod-amd-zen-headers
-	pkgdesc = Header files and scripts for building modules for Xanmod Linux kernel (AMD Zen optimization)
+	pkgdesc = Headers and scripts for building modules for the Linux Xanmod (AMD Zen optimization) kernel (AMD Zen optimization)
+	depends = pahole
 
